@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 @Parcelize
 @Serializable
 data class Lecture(
-    val lectureId: Int = 0,
-    val lectureName: String = "",
-    val professor: String = "",
+    val lectureId: Int,
+    val lectureName: String,
+    val professor: String,
 ) : Parcelable
