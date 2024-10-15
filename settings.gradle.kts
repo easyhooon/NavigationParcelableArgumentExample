@@ -1,3 +1,8 @@
+rootProject.name = "NavigationParcelableArgumentExample"
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
+
 pluginManagement {
     repositories {
         google {
@@ -19,6 +24,4 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "NavigationParcelableArgumentExample"
 include(":app")
- 
