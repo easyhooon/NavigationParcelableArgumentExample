@@ -8,4 +8,5 @@ import kotlinx.collections.immutable.persistentListOf
 data class HomeUiState(
     val lectureList: ImmutableList<Lecture> = persistentListOf(),
     val studentList: ImmutableList<Student> = persistentListOf(),
+    val studentGradeList: ImmutableList<Int> = persistentListOf(),
 )

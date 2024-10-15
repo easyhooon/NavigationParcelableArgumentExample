@@ -46,7 +46,11 @@ fun DetailScreen(
             .fillMaxSize()
             .padding(innerPadding),
     ) {
-        Column {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 8.dp),
+        ) {
             DetailTopAppBar(
                 popBackStack = popBackStack,
                 lectureName = uiState.lectureName,
@@ -57,11 +61,15 @@ fun DetailScreen(
             )
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "교수:\n ${uiState.lecture.professor}",
+                text = "교수: ${uiState.lecture.professor}",
             )
             Spacer(modifier = Modifier.height(16.dp))
             Text(
                 text = "수강생 목록:\n ${uiState.studentList}",
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+            Text(
+                text = "수강색 학년 분포:\n ${uiState.studentGradeDistribution}",
             )
         }
     }

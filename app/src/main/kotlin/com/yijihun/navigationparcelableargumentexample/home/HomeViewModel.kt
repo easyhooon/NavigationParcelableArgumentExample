@@ -41,6 +41,18 @@ class ListViewModel @Inject constructor() : ViewModel() {
                     Student(9, "임수빈", 1),
                     Student(10, "한지민", 3),
                 ).toImmutableList(),
+                studentGradeList = listOf(
+                    Student(1, "강지원", 1),
+                    Student(2, "이민준", 2),
+                    Student(3, "박서연", 1),
+                    Student(4, "김도현", 3),
+                    Student(5, "최예은", 2),
+                    Student(6, "정우진", 1),
+                    Student(7, "송하은", 3),
+                    Student(8, "윤준서", 2),
+                    Student(9, "임수빈", 1),
+                    Student(10, "한지민", 3),
+                ).map { student -> student.grade }.toImmutableList(),
             )
         }
     }

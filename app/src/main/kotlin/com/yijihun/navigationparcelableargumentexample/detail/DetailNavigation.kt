@@ -6,6 +6,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import com.yijihun.navigationparcelableargumentexample.LectureType
 import com.yijihun.navigationparcelableargumentexample.Route
+import com.yijihun.navigationparcelableargumentexample.StudentGradeListType
 import com.yijihun.navigationparcelableargumentexample.StudentListType
 import com.yijihun.navigationparcelableargumentexample.model.Lecture
 import com.yijihun.navigationparcelableargumentexample.model.Student
@@ -15,8 +16,9 @@ fun NavController.navigateToDetail(
     lectureName: String,
     lecture: Lecture,
     studentList: List<Student>,
+    studentGradeList: List<Int>,
 ) {
-    navigate(Route.Detail(lectureName, lecture, studentList))
+    navigate(Route.Detail(lectureName, lecture, studentList, studentGradeList))
 }
 
 fun NavGraphBuilder.detailNavGraph(
@@ -27,6 +29,7 @@ fun NavGraphBuilder.detailNavGraph(
         typeMap = mapOf(
             typeOf<Lecture>() to LectureType,
             typeOf<List<Student>>() to StudentListType,
+            typeOf<List<Int>>() to StudentGradeListType,
         ),
     ) {
         DetailRoute(

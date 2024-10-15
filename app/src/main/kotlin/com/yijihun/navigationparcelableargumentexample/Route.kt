@@ -20,6 +20,7 @@ sealed interface Route {
         val lectureName: String,
         val lecture: Lecture,
         val studentList: List<Student>,
+        val studentGradeList: List<Int>,
     ) : Route, Parcelable
 }
 
@@ -57,5 +58,23 @@ val StudentListType = object : NavType<List<Student>>(isNullableAllowed = false)
 
     override fun serializeAsValue(value: List<Student>): String {
         return Json.encodeToString(ListSerializer(Student.serializer()), value)
+    }
+}
+
+val StudentGradeListType = object : NavType<List<Int>>(isNullableAllowed = false) {
+    override fun get(bundle: Bundle, key: String): List<Int>? {
+        return bundle.getIntArray(key)?.toList()
+    }
+
+    override fun parseValue(value: String): List<Int> {
+        return value.split(",").map { it.toInt() }
+    }
+
+    override fun put(bundle: Bundle, key: String, value: List<Int>) {
+        bundle.putIntArray(key, value.toIntArray())
+    }
+
+    override fun serializeAsValue(value: List<Int>): String {
+        return value.joinToString(",")
     }
 }

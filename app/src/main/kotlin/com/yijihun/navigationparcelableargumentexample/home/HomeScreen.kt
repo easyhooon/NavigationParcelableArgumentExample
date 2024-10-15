@@ -24,7 +24,7 @@ import kotlinx.collections.immutable.persistentListOf
 @Composable
 fun HomeRoute(
     innerPadding: PaddingValues,
-    navigateToMap: (String, Lecture, List<Student>) -> Unit,
+    navigateToMap: (String, Lecture, List<Student>, List<Int>) -> Unit,
     viewModel: ListViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
@@ -40,7 +40,7 @@ fun HomeRoute(
 fun HomeScreen(
     innerPadding: PaddingValues,
     uiState: HomeUiState,
-    navigateToDetail: (String, Lecture, List<Student>) -> Unit,
+    navigateToDetail: (String, Lecture, List<Student>, List<Int>) -> Unit,
 ) {
     Box(
         modifier = Modifier
@@ -59,7 +59,12 @@ fun HomeScreen(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clickable {
-                            navigateToDetail(uiState.lectureList[index].lectureName, uiState.lectureList[index], uiState.studentList)
+                            navigateToDetail(
+                                uiState.lectureList[index].lectureName,
+                                uiState.lectureList[index],
+                                uiState.studentList,
+                                uiState.studentGradeList,
+                            )
                         },
                 )
                 HorizontalDivider(
@@ -85,7 +90,7 @@ fun HomeScreenPreview() {
                     Lecture(lectureId = 3, lectureName = "알고리즘", professor = "이영희"),
                 ),
             ),
-            navigateToDetail = { _, _, _ -> },
+            navigateToDetail = { _, _, _, _ -> },
         )
     }
 }

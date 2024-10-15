@@ -9,7 +9,7 @@ import com.yijihun.navigationparcelableargumentexample.model.Student
 
 fun NavGraphBuilder.homeNavGraph(
     innerPadding: PaddingValues,
-    navigateToDetail: (String, Lecture, List<Student>) -> Unit,
+    navigateToDetail: (String, Lecture, List<Student>, List<Int>) -> Unit,
 ) {
     composable<Route.Home> {
         HomeRoute(
