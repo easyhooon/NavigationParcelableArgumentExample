@@ -27,9 +27,9 @@ fun NavGraphBuilder.detailNavGraph(
 ) {
     composable<Route.Detail>(
         typeMap = mapOf(
+            typeOf<List<Int>>() to StudentGradeListType,
             typeOf<Lecture>() to LectureType,
             typeOf<List<Student>>() to StudentListType,
-            typeOf<List<Int>>() to StudentGradeListType,
         ),
     ) {
         DetailRoute(
