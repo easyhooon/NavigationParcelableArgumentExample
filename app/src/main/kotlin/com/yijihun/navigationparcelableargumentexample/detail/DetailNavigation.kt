@@ -14,11 +14,11 @@ import kotlin.reflect.typeOf
 
 fun NavController.navigateToDetail(
     lectureName: String,
+    studentGradeList: List<Int>,
     lecture: Lecture,
     studentList: List<Student>,
-    studentGradeList: List<Int>,
 ) {
-    navigate(Route.Detail(lectureName, lecture, studentList, studentGradeList))
+    navigate(Route.Detail(lectureName, studentGradeList, lecture, studentList))
 }
 
 fun NavGraphBuilder.detailNavGraph(

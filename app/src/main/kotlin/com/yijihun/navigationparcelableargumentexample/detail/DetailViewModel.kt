@@ -21,9 +21,9 @@ class DetailViewModel @Inject constructor(
 ) : ViewModel() {
     companion object {
         private const val LECTURE_NAME = "lectureName"
+        private const val STUDENT_GRADE_LIST = "studentGradeList"
         private const val LECTURE = "lecture"
         private const val STUDENT_LIST = "studentList"
-        private const val STUDENT_GRADE_LIST = "studentGradeList"
     }
 
     private val _uiState = MutableStateFlow(DetailUiState())
@@ -31,6 +31,10 @@ class DetailViewModel @Inject constructor(
 
     private val name: String =
         requireNotNull(savedStateHandle.get<String>(LECTURE_NAME)) { "lectureName is required." }
+
+    // Array<Int> 로 받으면 java.lang.ClassCastException: int[] cannot be cast to java.lang.Integer[] 에러 발생
+    private val studentGradeList: List<Int> =
+        requireNotNull(savedStateHandle.get<IntArray>(STUDENT_GRADE_LIST)?.toList()) { "studentGradeList is required." }
 
     private val lecture: Lecture =
         requireNotNull(
@@ -45,10 +49,6 @@ class DetailViewModel @Inject constructor(
                 array.map { Json.decodeFromString<Student>(it) }
             },
         ) { "student is required." }
-
-    // Array<Int> 로 받으면 java.lang.ClassCastException: int[] cannot be cast to java.lang.Integer[] 에러 발생
-    private val studentGradeList: List<Int> =
-        requireNotNull(savedStateHandle.get<IntArray>(STUDENT_GRADE_LIST)?.toList()) { "studentGradeList is required." }
 
     init {
         Timber.d("name: $name, lecture: $lecture, studentList: $studentList")
