@@ -9,7 +9,6 @@ import kotlinx.parcelize.Parcelize
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json
-import kotlin.reflect.KType
 import kotlin.reflect.typeOf
 
 sealed interface Route {
@@ -25,7 +24,7 @@ sealed interface Route {
         val studentList: List<Student>,
     ) : Route, Parcelable {
         companion object {
-            val DetailRouteNavTypeMap: Map<KType, NavType<*>> = mapOf(
+            val typeMap = mapOf(
                 typeOf<Lecture>() to LectureType,
                 typeOf<List<Student>>() to StudentListType,
             )

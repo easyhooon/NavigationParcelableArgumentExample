@@ -4,7 +4,6 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.navigation.toRoute
 import com.yijihun.navigationparcelableargumentexample.Route.Detail
-import com.yijihun.navigationparcelableargumentexample.Route.Detail.Companion.DetailRouteNavTypeMap
 import com.yijihun.navigationparcelableargumentexample.model.Lecture
 import com.yijihun.navigationparcelableargumentexample.model.Student
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -31,18 +30,18 @@ class DetailViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(DetailUiState())
     val uiState: StateFlow<DetailUiState> = _uiState.asStateFlow()
 
-    private val name: String = savedStateHandle.toRoute<Detail>(DetailRouteNavTypeMap).lectureName
+    private val name: String = savedStateHandle.toRoute<Detail>(Detail.typeMap).lectureName
 
 //    private val name: String =
 //        requireNotNull(savedStateHandle.get<String>(LECTURE_NAME)) { "lectureName is required." }
 
-    private val studentGradeList: List<Int> = savedStateHandle.toRoute<Detail>(DetailRouteNavTypeMap).studentGradeList
+    private val studentGradeList: List<Int> = savedStateHandle.toRoute<Detail>(Detail.typeMap).studentGradeList
 
 //    // Array<Int> 로 받으면 java.lang.ClassCastException: int[] cannot be cast to java.lang.Integer[] 에러 발생
 //    private val studentGradeList: List<Int> =
 //        requireNotNull(savedStateHandle.get<IntArray>(STUDENT_GRADE_LIST)?.toList()) { "studentGradeList is required." }
 
-    private val lecture: Lecture = savedStateHandle.toRoute<Detail>(DetailRouteNavTypeMap).lecture
+    private val lecture: Lecture = savedStateHandle.toRoute<Detail>(Detail.typeMap).lecture
 
 //    private val lecture: Lecture =
 //        requireNotNull(
@@ -51,7 +50,7 @@ class DetailViewModel @Inject constructor(
 //            },
 //        ) { "lecture is required." }
 
-    private val studentList: List<Student> = savedStateHandle.toRoute<Detail>(DetailRouteNavTypeMap).studentList
+    private val studentList: List<Student> = savedStateHandle.toRoute<Detail>(Detail.typeMap).studentList
 
 //    private val studentList: List<Student> =
 //        requireNotNull(
