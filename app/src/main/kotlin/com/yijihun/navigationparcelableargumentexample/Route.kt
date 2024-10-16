@@ -24,24 +24,6 @@ sealed interface Route {
     ) : Route, Parcelable
 }
 
-val StudentGradeListType = object : NavType<List<Int>>(isNullableAllowed = false) {
-    override fun get(bundle: Bundle, key: String): List<Int>? {
-        return bundle.getIntArray(key)?.toList()
-    }
-
-    override fun parseValue(value: String): List<Int> {
-        return value.split(",").map { it.toInt() }
-    }
-
-    override fun put(bundle: Bundle, key: String, value: List<Int>) {
-        bundle.putIntArray(key, value.toIntArray())
-    }
-
-    override fun serializeAsValue(value: List<Int>): String {
-        return value.joinToString(",")
-    }
-}
-
 val LectureType = object : NavType<Lecture>(isNullableAllowed = false) {
     override fun get(bundle: Bundle, key: String): Lecture? {
         return bundle.getString(key)?.let { Json.decodeFromString(it) }
