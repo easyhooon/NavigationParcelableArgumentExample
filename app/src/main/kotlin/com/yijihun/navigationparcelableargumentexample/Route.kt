@@ -9,6 +9,8 @@ import kotlinx.parcelize.Parcelize
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json
+import kotlin.reflect.KType
+import kotlin.reflect.typeOf
 
 sealed interface Route {
     @Serializable
@@ -21,9 +23,17 @@ sealed interface Route {
         val studentGradeList: List<Int>,
         val lecture: Lecture,
         val studentList: List<Student>,
-    ) : Route, Parcelable
+    ) : Route, Parcelable {
+        companion object {
+            val DetailRouteNavTypeMap: Map<KType, NavType<*>> = mapOf(
+                typeOf<Lecture>() to LectureType,
+                typeOf<List<Student>>() to StudentListType,
+            )
+        }
+    }
 }
 
+@Serializable
 val LectureType = object : NavType<Lecture>(isNullableAllowed = false) {
     override fun get(bundle: Bundle, key: String): Lecture? {
         return bundle.getString(key)?.let { Json.decodeFromString(it) }
@@ -42,6 +52,7 @@ val LectureType = object : NavType<Lecture>(isNullableAllowed = false) {
     }
 }
 
+@Serializable
 val StudentListType = object : NavType<List<Student>>(isNullableAllowed = false) {
     override fun get(bundle: Bundle, key: String): List<Student>? {
         return bundle.getStringArray(key)?.map { Json.decodeFromString<Student>(it) }
