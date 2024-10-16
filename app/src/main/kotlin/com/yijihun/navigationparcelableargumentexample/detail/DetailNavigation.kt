@@ -22,7 +22,7 @@ fun NavGraphBuilder.detailNavGraph(
     popBackStack: () -> Unit,
 ) {
     composable<Route.Detail>(
-        typeMap = Route.Detail.DetailRouteNavTypeMap
+        typeMap = Route.Detail.DetailRouteNavTypeMap,
     ) {
         DetailRoute(
             innerPadding = innerPadding,
