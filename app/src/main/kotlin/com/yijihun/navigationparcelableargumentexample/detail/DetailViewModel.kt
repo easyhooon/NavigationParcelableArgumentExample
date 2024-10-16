@@ -36,10 +36,9 @@ class DetailViewModel @Inject constructor(
 //    private val name: String =
 //        requireNotNull(savedStateHandle.get<String>(LECTURE_NAME)) { "lectureName is required." }
 
-    // Array<Int> 로 받으면 java.lang.ClassCastException: int[] cannot be cast to java.lang.Integer[] 에러 발생
-    private val studentGradeList: List<Int> =
-        requireNotNull(savedStateHandle.toRoute<Detail>(DetailRouteNavTypeMap).studentGradeList) { "studentGradeList is required." }
+    private val studentGradeList: List<Int> = savedStateHandle.toRoute<Detail>(DetailRouteNavTypeMap).studentGradeList
 
+//    // Array<Int> 로 받으면 java.lang.ClassCastException: int[] cannot be cast to java.lang.Integer[] 에러 발생
 //    private val studentGradeList: List<Int> =
 //        requireNotNull(savedStateHandle.get<IntArray>(STUDENT_GRADE_LIST)?.toList()) { "studentGradeList is required." }
 
