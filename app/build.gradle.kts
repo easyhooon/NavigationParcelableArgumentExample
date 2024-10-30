@@ -46,7 +46,6 @@ android {
         }
     }
     composeCompiler {
-        enableStrongSkippingMode = true
         includeSourceInformation = true
     }
     packaging {
