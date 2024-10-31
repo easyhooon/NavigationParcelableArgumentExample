@@ -34,7 +34,7 @@ class LectureRepositoryImpl @Inject constructor() : LectureRepository {
             Lecture(6, "컴퓨터구조", "오세훈 교수"),
             Lecture(7, "운영체제", "나영석 교수"),
             Lecture(8, "앱 개발", "장민호 교수"),
-        ).toImmutableList()
+        )
 
         val mockStudentList = listOf(
             Student(1, "강지원", 1),
@@ -47,7 +47,7 @@ class LectureRepositoryImpl @Inject constructor() : LectureRepository {
             Student(8, "윤준서", 2),
             Student(9, "임수빈", 1),
             Student(10, "한지민", 3),
-        ).toImmutableList()
+        )
 
         val mockStudentGradeList = listOf(
             Student(1, "강지원", 1),
@@ -60,6 +60,6 @@ class LectureRepositoryImpl @Inject constructor() : LectureRepository {
             Student(8, "윤준서", 2),
             Student(9, "임수빈", 1),
             Student(10, "한지민", 3),
-        ).map { student -> student.grade }.toImmutableList()
+        ).map { student -> student.grade }
     }
 }

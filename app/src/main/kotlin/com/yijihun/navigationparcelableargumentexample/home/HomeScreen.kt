@@ -71,12 +71,6 @@ fun Home(
                                         state.studentList,
                                     ),
                                 )
-//                                state.eventSink(
-//                                    HomeScreen.Event.OnLectureClick(
-//                                        state.lectureList[index].lectureName,
-//                                        state.studentGradeList,
-//                                    ),
-//                                )
                             },
                     )
                     HorizontalDivider(

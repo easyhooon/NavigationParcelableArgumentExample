@@ -68,8 +68,6 @@ dependencies {
     implementation(libs.bundles.androidx.compose)
     debugImplementation(libs.androidx.compose.ui.tooling)
 
-    implementation(libs.bundles.androidx.lifecycle)
-
     implementation(libs.androidx.hilt.common)
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
