@@ -4,7 +4,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.serialization)
-    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
     alias(libs.plugins.kotlin.parcelize)
@@ -55,9 +55,11 @@ android {
     }
 }
 
-dependencies {
-    compileOnly(libs.compose.compiler.extension)
+ksp {
+    arg("circuit.codegen.mode", "hilt")
+}
 
+dependencies {
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.kotlinx.collections.immutable)
     implementation(libs.kotlinx.coroutines.core)
@@ -66,14 +68,16 @@ dependencies {
     implementation(libs.bundles.androidx.compose)
     debugImplementation(libs.androidx.compose.ui.tooling)
 
-    implementation(libs.androidx.navigation.compose)
-    implementation(libs.androidx.hilt.navigation.compose)
-
     implementation(libs.bundles.androidx.lifecycle)
 
+    implementation(libs.androidx.hilt.common)
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
 
     detektPlugins(libs.detekt.formatting)
     implementation(libs.timber)
+
+    implementation(libs.bundles.circuit)
+    api(libs.circuit.codegen.annotation)
+    ksp(libs.circuit.codegen.ksp)
 }
