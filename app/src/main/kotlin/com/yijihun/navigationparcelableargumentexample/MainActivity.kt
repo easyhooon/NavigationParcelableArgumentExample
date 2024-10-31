@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NavigationParcelableArgumentExampleTheme {
-                val backStack = rememberSaveableBackStack(HomeScreen)
+                val backStack = rememberSaveableBackStack(root = HomeScreen)
                 val navigator = rememberCircuitNavigator(backStack)
 
                 CircuitCompositionLocals(circut) {
