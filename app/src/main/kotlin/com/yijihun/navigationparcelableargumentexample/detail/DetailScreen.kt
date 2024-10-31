@@ -65,17 +65,14 @@ fun Detail(
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
                     text = "강의:\n ${state.lecture}",
-                    // text = "강의:\n ${"컴퓨터 구조"}",
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
-                    // text = "교수: ${state.lecture.professor}",
                     text = "교수: ${"홍길동"}",
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
                     text = "수강생 목록:\n ${state.studentList}",
-                    // text = "수강생 목록",
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
