@@ -8,7 +8,7 @@ versionName = "1.0.0"
 packageName = "com.yijihun.navigation_parcelable_argument_example"
 
 android-gradle-plugin = "8.5.2"
-kotlin-core = "2.0.20"
+kotlin-core = "2.0.21"
 kotlin-detekt = "1.23.6"
 kotlin-ktlint-gradle = "11.6.1"
 kotlin-ktlint-source = "0.50.0"
@@ -27,7 +27,7 @@ androidx-hilt = "1.2.0"
 
 hilt = "2.52"
 timber = "5.0.1"
-ksp = "2.0.20-1.0.24"
+ksp = "2.0.21-1.0.25"
 circuit = "0.24.0"
 
 [libraries]

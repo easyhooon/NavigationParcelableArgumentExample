@@ -13,12 +13,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.slack.circuit.codegen.annotations.CircuitInject
 import com.slack.circuit.runtime.CircuitUiEvent
 import com.slack.circuit.runtime.CircuitUiState
 import com.slack.circuit.runtime.screen.Screen
+import com.yijihun.navigationparcelableargumentexample.home.HomeScreen
 import com.yijihun.navigationparcelableargumentexample.model.Lecture
 import com.yijihun.navigationparcelableargumentexample.model.Student
 import com.yijihun.navigationparcelableargumentexample.ui.theme.NavigationParcelableArgumentExampleTheme
+import dagger.hilt.android.components.ActivityRetainedComponent
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
@@ -41,13 +44,15 @@ data class DetailScreen(
     }
 }
 
+@CircuitInject(DetailScreen::class, ActivityRetainedComponent::class)
 @Composable
 fun Detail(
     state: DetailScreen.State,
+    modifier: Modifier = Modifier,
 ) {
     Scaffold { innerPadding ->
         Box(
-            modifier = Modifier
+            modifier = modifier
                 .fillMaxSize()
                 .padding(innerPadding),
         ) {

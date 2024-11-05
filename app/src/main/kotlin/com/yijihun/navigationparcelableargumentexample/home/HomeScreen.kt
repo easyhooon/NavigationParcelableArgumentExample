@@ -13,12 +13,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.slack.circuit.codegen.annotations.CircuitInject
 import com.slack.circuit.runtime.CircuitUiEvent
 import com.slack.circuit.runtime.CircuitUiState
 import com.slack.circuit.runtime.screen.Screen
 import com.yijihun.navigationparcelableargumentexample.model.Lecture
 import com.yijihun.navigationparcelableargumentexample.model.Student
 import com.yijihun.navigationparcelableargumentexample.ui.theme.NavigationParcelableArgumentExampleTheme
+import dagger.hilt.android.components.ActivityRetainedComponent
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.parcelize.Parcelize
 
@@ -41,13 +43,15 @@ data object HomeScreen : Screen {
     }
 }
 
+@CircuitInject(HomeScreen::class, ActivityRetainedComponent::class)
 @Composable
 fun Home(
     state: HomeScreen.State,
+    modifier: Modifier = Modifier,
 ) {
     Scaffold { innerPadding ->
         Box(
-            modifier = Modifier
+            modifier = modifier
                 .fillMaxSize()
                 .padding(innerPadding),
         ) {
