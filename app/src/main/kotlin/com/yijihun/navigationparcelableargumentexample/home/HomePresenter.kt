@@ -16,22 +16,22 @@ import dagger.assisted.AssistedInject
 import dagger.hilt.android.components.ActivityRetainedComponent
 
 class HomePresenter @AssistedInject constructor(
-    private val lectureRepository: LectureRepository,
+    private val repository: LectureRepository,
     @Assisted private val navigator: Navigator,
 ) : Presenter<HomeScreen.State> {
 
     @Composable
     override fun present(): HomeScreen.State {
         val lectureList by produceRetainedState<List<Lecture>>(initialValue = emptyList()) {
-            value = lectureRepository.getLectureList()
+            value = repository.getLectureList()
         }
 
         val studentList by produceRetainedState<List<Student>>(initialValue = emptyList()) {
-            value = lectureRepository.getStudentList()
+            value = repository.getStudentList()
         }
 
         val studentGradeList by produceRetainedState<List<Int>>(initialValue = emptyList()) {
-            value = lectureRepository.getStudentGradeList()
+            value = repository.getStudentGradeList()
         }
 
         return HomeScreen.State(
