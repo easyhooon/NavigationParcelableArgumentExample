@@ -1,7 +1,7 @@
-package com.yijihun.navigationparcelableargumentexample.home
+package com.yijihun.navigationcustomdataclassargumentexample.home
 
-import com.yijihun.navigationparcelableargumentexample.model.Lecture
-import com.yijihun.navigationparcelableargumentexample.model.Student
+import com.yijihun.navigationcustomdataclassargumentexample.model.Lecture
+import com.yijihun.navigationcustomdataclassargumentexample.model.Student
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 

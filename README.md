@@ -1,4 +1,4 @@
-# NavigationParcelableArgumentExample
+# NavigationCustomDataClassArgumentExample
 
 [[Android] Compose Type Safe Navigation Custom Data Class를 Argument로 전달하는 방법](https://velog.io/@mraz3068/Android-Compose-Type-Safe-Navigation-Custom-Data-Class-Argument-Delivery-Way)<br>
 

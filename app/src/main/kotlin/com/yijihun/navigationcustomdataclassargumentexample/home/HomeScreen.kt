@@ -1,4 +1,4 @@
-package com.yijihun.navigationparcelableargumentexample.home
+package com.yijihun.navigationcustomdataclassargumentexample.home
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -16,9 +16,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.yijihun.navigationparcelableargumentexample.model.Lecture
-import com.yijihun.navigationparcelableargumentexample.model.Student
-import com.yijihun.navigationparcelableargumentexample.ui.theme.NavigationParcelableArgumentExampleTheme
+import com.yijihun.navigationcustomdataclassargumentexample.model.Lecture
+import com.yijihun.navigationcustomdataclassargumentexample.model.Student
+import com.yijihun.navigationcustomdataclassargumentexample.ui.theme.NavigationCustomDataClassArgumentExampleTheme
 import kotlinx.collections.immutable.persistentListOf
 
 @Composable
@@ -80,7 +80,7 @@ fun HomeScreen(
 @Preview
 @Composable
 fun HomeScreenPreview() {
-    NavigationParcelableArgumentExampleTheme {
+    NavigationCustomDataClassArgumentExampleTheme {
         HomeScreen(
             innerPadding = PaddingValues(),
             uiState = HomeUiState(

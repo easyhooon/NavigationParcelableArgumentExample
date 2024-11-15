@@ -1,7 +1,7 @@
-package com.yijihun.navigationparcelableargumentexample.home
+package com.yijihun.navigationcustomdataclassargumentexample.home
 
 import androidx.lifecycle.ViewModel
-import com.yijihun.navigationparcelableargumentexample.data.LectureRepository
+import com.yijihun.navigationcustomdataclassargumentexample.data.LectureRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.flow.MutableStateFlow

@@ -1,4 +1,4 @@
-package com.yijihun.navigationparcelableargumentexample.detail
+package com.yijihun.navigationcustomdataclassargumentexample.detail
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -16,7 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.yijihun.navigationparcelableargumentexample.ui.theme.NavigationParcelableArgumentExampleTheme
+import com.yijihun.navigationcustomdataclassargumentexample.ui.theme.NavigationCustomDataClassArgumentExampleTheme
 
 @Composable
 fun DetailTopAppBar(
@@ -49,7 +49,7 @@ fun DetailTopAppBar(
 @Preview
 @Composable
 fun DetailTopAppBarPreview() {
-    NavigationParcelableArgumentExampleTheme {
+    NavigationCustomDataClassArgumentExampleTheme {
         DetailTopAppBar(
             popBackStack = {},
             lectureName = "컴퓨터 구조",

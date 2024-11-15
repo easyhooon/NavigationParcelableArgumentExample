@@ -1,7 +1,7 @@
-package com.yijihun.navigationparcelableargumentexample.data
+package com.yijihun.navigationcustomdataclassargumentexample.data
 
-import com.yijihun.navigationparcelableargumentexample.model.Lecture
-import com.yijihun.navigationparcelableargumentexample.model.Student
+import com.yijihun.navigationcustomdataclassargumentexample.model.Lecture
+import com.yijihun.navigationcustomdataclassargumentexample.model.Student
 import javax.inject.Inject
 
 interface LectureRepository {

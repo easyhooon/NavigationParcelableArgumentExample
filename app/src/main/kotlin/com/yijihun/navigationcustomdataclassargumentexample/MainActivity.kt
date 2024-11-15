@@ -1,10 +1,10 @@
-package com.yijihun.navigationparcelableargumentexample
+package com.yijihun.navigationcustomdataclassargumentexample
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.yijihun.navigationparcelableargumentexample.ui.theme.NavigationParcelableArgumentExampleTheme
+import com.yijihun.navigationcustomdataclassargumentexample.ui.theme.NavigationCustomDataClassArgumentExampleTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -13,7 +13,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            NavigationParcelableArgumentExampleTheme {
+            NavigationCustomDataClassArgumentExampleTheme {
                 MainScreen()
             }
         }

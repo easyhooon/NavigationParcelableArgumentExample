@@ -1,4 +1,4 @@
-package com.yijihun.navigationparcelableargumentexample
+package com.yijihun.navigationcustomdataclassargumentexample
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
@@ -8,9 +8,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import com.yijihun.navigationparcelableargumentexample.detail.detailNavGraph
-import com.yijihun.navigationparcelableargumentexample.detail.navigateToDetail
-import com.yijihun.navigationparcelableargumentexample.home.homeNavGraph
+import com.yijihun.navigationcustomdataclassargumentexample.detail.detailNavGraph
+import com.yijihun.navigationcustomdataclassargumentexample.detail.navigateToDetail
+import com.yijihun.navigationcustomdataclassargumentexample.home.homeNavGraph
 
 @Composable
 fun MainScreen() {

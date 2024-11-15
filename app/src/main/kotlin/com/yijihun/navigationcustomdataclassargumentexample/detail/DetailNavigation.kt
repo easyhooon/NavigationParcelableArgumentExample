@@ -1,12 +1,12 @@
-package com.yijihun.navigationparcelableargumentexample.detail
+package com.yijihun.navigationcustomdataclassargumentexample.detail
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
-import com.yijihun.navigationparcelableargumentexample.Route
-import com.yijihun.navigationparcelableargumentexample.model.Lecture
-import com.yijihun.navigationparcelableargumentexample.model.Student
+import com.yijihun.navigationcustomdataclassargumentexample.Route
+import com.yijihun.navigationcustomdataclassargumentexample.model.Lecture
+import com.yijihun.navigationcustomdataclassargumentexample.model.Student
 
 fun NavController.navigateToDetail(
     lectureName: String,

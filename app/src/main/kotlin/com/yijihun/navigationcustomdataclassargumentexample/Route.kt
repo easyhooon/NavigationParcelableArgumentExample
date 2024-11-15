@@ -1,9 +1,9 @@
-package com.yijihun.navigationparcelableargumentexample
+package com.yijihun.navigationcustomdataclassargumentexample
 
 import android.os.Bundle
 import androidx.navigation.NavType
-import com.yijihun.navigationparcelableargumentexample.model.Lecture
-import com.yijihun.navigationparcelableargumentexample.model.Student
+import com.yijihun.navigationcustomdataclassargumentexample.model.Lecture
+import com.yijihun.navigationcustomdataclassargumentexample.model.Student
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json

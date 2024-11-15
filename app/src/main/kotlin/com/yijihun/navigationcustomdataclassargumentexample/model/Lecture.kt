@@ -1,4 +1,4 @@
-package com.yijihun.navigationparcelableargumentexample.model
+package com.yijihun.navigationcustomdataclassargumentexample.model
 
 import kotlinx.serialization.Serializable
 
