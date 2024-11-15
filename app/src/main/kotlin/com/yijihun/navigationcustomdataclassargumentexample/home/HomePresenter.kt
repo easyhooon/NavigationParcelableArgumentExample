@@ -1,4 +1,4 @@
-package com.yijihun.navigationparcelableargumentexample.home
+package com.yijihun.navigationcustomdataclassargumentexample.home
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -6,10 +6,10 @@ import com.slack.circuit.codegen.annotations.CircuitInject
 import com.slack.circuit.retained.produceRetainedState
 import com.slack.circuit.runtime.Navigator
 import com.slack.circuit.runtime.presenter.Presenter
-import com.yijihun.navigationparcelableargumentexample.data.LectureRepository
-import com.yijihun.navigationparcelableargumentexample.detail.DetailScreen
-import com.yijihun.navigationparcelableargumentexample.model.Lecture
-import com.yijihun.navigationparcelableargumentexample.model.Student
+import com.yijihun.navigationcustomdataclassargumentexample.data.LectureRepository
+import com.yijihun.navigationcustomdataclassargumentexample.detail.DetailScreen
+import com.yijihun.navigationcustomdataclassargumentexample.model.Lecture
+import com.yijihun.navigationcustomdataclassargumentexample.model.Student
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject

@@ -1,4 +1,4 @@
-package com.yijihun.navigationparcelableargumentexample.detail
+package com.yijihun.navigationcustomdataclassargumentexample.detail
 
 import androidx.compose.runtime.Composable
 import com.slack.circuit.codegen.annotations.CircuitInject

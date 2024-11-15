@@ -1,8 +1,7 @@
-package com.yijihun.navigationparcelableargumentexample.detail
+package com.yijihun.navigationcustomdataclassargumentexample.detail
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -17,10 +16,9 @@ import com.slack.circuit.codegen.annotations.CircuitInject
 import com.slack.circuit.runtime.CircuitUiEvent
 import com.slack.circuit.runtime.CircuitUiState
 import com.slack.circuit.runtime.screen.Screen
-import com.yijihun.navigationparcelableargumentexample.home.HomeScreen
-import com.yijihun.navigationparcelableargumentexample.model.Lecture
-import com.yijihun.navigationparcelableargumentexample.model.Student
-import com.yijihun.navigationparcelableargumentexample.ui.theme.NavigationParcelableArgumentExampleTheme
+import com.yijihun.navigationcustomdataclassargumentexample.model.Lecture
+import com.yijihun.navigationcustomdataclassargumentexample.model.Student
+import com.yijihun.navigationcustomdataclassargumentexample.ui.theme.NavigationParcelableArgumentExampleTheme
 import dagger.hilt.android.components.ActivityRetainedComponent
 import kotlinx.parcelize.Parcelize
 

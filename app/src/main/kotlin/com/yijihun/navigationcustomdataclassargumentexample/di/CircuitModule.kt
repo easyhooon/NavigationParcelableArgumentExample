@@ -1,4 +1,4 @@
-package com.yijihun.navigationparcelableargumentexample.di
+package com.yijihun.navigationcustomdataclassargumentexample.di
 
 import com.slack.circuit.foundation.Circuit
 import com.slack.circuit.runtime.presenter.Presenter
