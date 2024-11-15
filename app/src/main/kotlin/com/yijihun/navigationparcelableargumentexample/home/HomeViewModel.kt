@@ -22,7 +22,7 @@ class ListViewModel @Inject constructor(
             it.copy(
                 lectureList = repository.getLectureList().toImmutableList(),
                 studentList = repository.getStudentList().toImmutableList(),
-                studentGradeList = repository.getStudentGradeList().toImmutableList()
+                studentGradeList = repository.getStudentGradeList().toImmutableList(),
             )
         }
     }
