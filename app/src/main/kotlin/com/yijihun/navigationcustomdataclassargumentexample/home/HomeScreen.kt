@@ -19,7 +19,7 @@ import com.slack.circuit.runtime.CircuitUiState
 import com.slack.circuit.runtime.screen.Screen
 import com.yijihun.navigationcustomdataclassargumentexample.model.Lecture
 import com.yijihun.navigationcustomdataclassargumentexample.model.Student
-import com.yijihun.navigationcustomdataclassargumentexample.ui.theme.NavigationParcelableArgumentExampleTheme
+import com.yijihun.navigationcustomdataclassargumentexample.ui.theme.NavigationCustomDataClassArgumentExampleTheme
 import dagger.hilt.android.components.ActivityRetainedComponent
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.parcelize.Parcelize
@@ -91,7 +91,7 @@ fun Home(
 @Preview
 @Composable
 fun HomeScreenPreview() {
-    NavigationParcelableArgumentExampleTheme {
+    NavigationCustomDataClassArgumentExampleTheme {
         Home(
             state = HomeScreen.State(
                 lectureList = persistentListOf(

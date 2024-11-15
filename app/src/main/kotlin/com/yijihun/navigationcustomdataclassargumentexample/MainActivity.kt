@@ -10,7 +10,7 @@ import com.slack.circuit.foundation.CircuitCompositionLocals
 import com.slack.circuit.foundation.NavigableCircuitContent
 import com.slack.circuit.foundation.rememberCircuitNavigator
 import com.yijihun.navigationcustomdataclassargumentexample.home.HomeScreen
-import com.yijihun.navigationcustomdataclassargumentexample.ui.theme.NavigationParcelableArgumentExampleTheme
+import com.yijihun.navigationcustomdataclassargumentexample.ui.theme.NavigationCustomDataClassArgumentExampleTheme
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            NavigationParcelableArgumentExampleTheme {
+            NavigationCustomDataClassArgumentExampleTheme {
                 val backStack = rememberSaveableBackStack(root = HomeScreen)
                 val navigator = rememberCircuitNavigator(backStack)
 

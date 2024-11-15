@@ -18,7 +18,7 @@ import com.slack.circuit.runtime.CircuitUiState
 import com.slack.circuit.runtime.screen.Screen
 import com.yijihun.navigationcustomdataclassargumentexample.model.Lecture
 import com.yijihun.navigationcustomdataclassargumentexample.model.Student
-import com.yijihun.navigationcustomdataclassargumentexample.ui.theme.NavigationParcelableArgumentExampleTheme
+import com.yijihun.navigationcustomdataclassargumentexample.ui.theme.NavigationCustomDataClassArgumentExampleTheme
 import dagger.hilt.android.components.ActivityRetainedComponent
 import kotlinx.parcelize.Parcelize
 
@@ -89,7 +89,7 @@ fun Detail(
 @Preview
 @Composable
 fun DetailScreenPreview() {
-    NavigationParcelableArgumentExampleTheme {
+    NavigationCustomDataClassArgumentExampleTheme {
         Detail(
             state = DetailScreen.State(
                 lectureName = "컴퓨터 구조",

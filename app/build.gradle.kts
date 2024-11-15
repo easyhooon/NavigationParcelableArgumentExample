@@ -11,11 +11,11 @@ plugins {
 }
 
 android {
-    namespace = "com.yijihun.navigationparcelableargumentexample"
+    namespace = "com.yijihun.navigationcustomdataclassargumentexample"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.yijihun.navigationparcelableargumentexample"
+        applicationId = "com.yijihun.navigationcustomdataclassargumentexample"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
