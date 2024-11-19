@@ -17,7 +17,7 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     @Inject
-    lateinit var circut: Circuit
+    lateinit var circuit: Circuit
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
                 val backStack = rememberSaveableBackStack(root = HomeScreen)
                 val navigator = rememberCircuitNavigator(backStack)
 
-                CircuitCompositionLocals(circut) {
+                CircuitCompositionLocals(circuit) {
                     NavigableCircuitContent(
                         navigator = navigator,
                         backStack = backStack,
