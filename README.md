@@ -1,4 +1,4 @@
-# NavigationParcelableArgumentExample
+# NavigationCustomDataClassArgumentExample
 
 [[Android / Compose] Circuit 찍먹 해보기](https://velog.io/@mraz3068/Circuit-Try-Out)<br>
 

@@ -1,4 +1,4 @@
-package com.yijihun.navigationparcelableargumentexample.ui.theme
+package com.yijihun.navigationcustomdataclassargumentexample.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,7 +1,7 @@
-package com.yijihun.navigationparcelableargumentexample.di
+package com.yijihun.navigationcustomdataclassargumentexample.di
 
-import com.yijihun.navigationparcelableargumentexample.data.LectureRepository
-import com.yijihun.navigationparcelableargumentexample.data.LectureRepositoryImpl
+import com.yijihun.navigationcustomdataclassargumentexample.data.LectureRepository
+import com.yijihun.navigationcustomdataclassargumentexample.data.LectureRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

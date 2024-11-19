@@ -5,7 +5,7 @@ targetSdk = "34"
 compileSdk = "34"
 versionCode = "1"
 versionName = "1.0.0"
-packageName = "com.yijihun.navigation_parcelable_argument_example"
+packageName = "com.yijihun.navigation_custom_argument_example"
 
 android-gradle-plugin = "8.5.2"
 kotlin-core = "2.0.21"

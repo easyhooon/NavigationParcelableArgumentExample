@@ -1,4 +1,4 @@
-package com.yijihun.navigationparcelableargumentexample.home
+package com.yijihun.navigationcustomdataclassargumentexample.home
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -17,9 +17,9 @@ import com.slack.circuit.codegen.annotations.CircuitInject
 import com.slack.circuit.runtime.CircuitUiEvent
 import com.slack.circuit.runtime.CircuitUiState
 import com.slack.circuit.runtime.screen.Screen
-import com.yijihun.navigationparcelableargumentexample.model.Lecture
-import com.yijihun.navigationparcelableargumentexample.model.Student
-import com.yijihun.navigationparcelableargumentexample.ui.theme.NavigationParcelableArgumentExampleTheme
+import com.yijihun.navigationcustomdataclassargumentexample.model.Lecture
+import com.yijihun.navigationcustomdataclassargumentexample.model.Student
+import com.yijihun.navigationcustomdataclassargumentexample.ui.theme.NavigationCustomDataClassArgumentExampleTheme
 import dagger.hilt.android.components.ActivityRetainedComponent
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.parcelize.Parcelize
@@ -91,7 +91,7 @@ fun Home(
 @Preview
 @Composable
 fun HomeScreenPreview() {
-    NavigationParcelableArgumentExampleTheme {
+    NavigationCustomDataClassArgumentExampleTheme {
         Home(
             state = HomeScreen.State(
                 lectureList = persistentListOf(

@@ -1,7 +1,6 @@
-package com.yijihun.navigationparcelableargumentexample.model
+package com.yijihun.navigationcustomdataclassargumentexample.model
 
 import android.os.Parcelable
-import androidx.compose.runtime.Immutable
 import kotlinx.parcelize.Parcelize
 import kotlinx.serialization.Serializable
 
